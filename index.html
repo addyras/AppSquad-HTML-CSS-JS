@@ -1,69 +1,205 @@
 <!DOCTYPE html>
-<html>
- <head>
-    <title>Company Profile</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Camp Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #b30000;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+        .inline-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .inline-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #b30000;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="reset"] {
+            background-color: #666;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #800000;
+        }
+        button[type="reset"]:hover {
+            background-color: #444;
+        }
+        .map-section {
+            margin-top: 40px;
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 8px;
+        }
+    </style>
 </head>
-  <body bgcolor="#f4f4f9" text="#333333">
+<body>
 
-    <h1 align="center"><font face="Arial, Helvetica" color="#1a252f"><b>Company Profile</b></font></h1>
-    
-    <hr width="80%" color="#cccccc" size="1">
+<div class="container">
+    <h1>Blood Donation Camp Registration</h1>
+    <p style="text-align: center;">Give blood, save lives. Please fill out the form below to register.</p>
 
-    <table border="1" bordercolor="#dddddd" width="90%" cellspacing="0" cellpadding="20" align="center" bgcolor="white">
-        <thead bgcolor="#2c3e50">
-            <tr>
-                <th><font size="4" face="Arial" color="white">Name</font></th>
-                <th><font size="4" face="Arial" color="white">Home</font></th>
-                <th><font size="4" face="Arial"><a href="#about"><font color="white">About</font></a></font></th>
-                <th><font size="4" face="Arial"><a href="#services"><font color="white">Service</font></a></font></th>
-            </tr>
-          </thead>
-        <tbody align="center">
-            <tr>
-                  <td colspan="4">
-                      <img src="https://media.istockphoto.com/id/637867656/photo/silhouette-row-of-businessmen-sitting-in-meeting-room.jpg?s=612x612&w=0&k=20&c=jEzOt9Vdij26XVv8jxkC_CA2RyAUmKriAVce46TS74E=" width="70%" border="0">
-                </td>
-            </tr>
-            <tr>
-                   <td colspan="4" id="about" bgcolor="#f0f4f8"> 
-                      <h3 align="center"><font face="Arial" color="#1a252f">About Us</font></h3>
-                </td>
-            </tr>
-            <tr>
-                  <td colspan="2">
-                    <img src="https://cdn.pixabay.com/photo/2016/07/10/17/20/architecture-1508053_1280.jpg" width="90%" align="center" border="0">
-                  </td>
-                <td colspan="2" width="50%" align="left" valign="top">
-                      <font face="Arial, Helvetica" size="3">
-                      <blockquote>
-                      <mark>Established in 1992</mark>, our company is a trusted industry leader specializing in comprehensive, end-to-end solutions. With over <b>three decades of proven expertise</b>, we combine our deep historical knowledge with continuous innovation to deliver forward-thinking and reliable results. Our success is driven by a highly skilled, dedicated team of professionals who maintain <u>uncompromising quality standards</u> across every project we undertake. Above all, we believe in building <i>true collaborative partnerships</i>, and our main goal always remains absolute client satisfaction by consistently understanding and exceeding our clients' unique expectations.  
-                      </blockquote>
-                      </font>
-                </td>
-            </tr> 
-              <tr>
-                <td colspan="4" id="services" bgcolor="#f0f4f8">
-                    <h3 align="center"><font face="Arial" color="#1a252f">Our Services</font></h3>
-                </td>
-            </tr>   
-               <tr>
-                <td width="25%"><font face="Arial"><b>Web Development</b></font></td>
-                <td width="25%"><font face="Arial"><b>App Development</b></font></td>
-                <td width="25%"><font face="Arial"><b>Data Management</b></font></td>
-                <td width="25%"><font face="Arial"><b>SEO</b></font></td> 
-            </tr>      
-        </tbody>
-          <tfoot align="center" bgcolor="#2c3e50">
-            <tr> 
-                  <td colspan="4"><h3 align="center"><font face="Arial" color="white">Contact us</font></h3></td> 
-            </tr>
-              <tr>
-                <td><b><font face="Arial"><a href="tel:343414153"><font color="white">Call us</font></a></font></b></td>
-                <td><b><font face="Arial"><a href="mailto:adityarastogiind@gmail.com"><font color="white">Mail us</font></a></font></b></td>
-                <td><b><font face="Arial"><a href="https://github.com/addyras"><font color="white">Github</font></a></font></b></td>
-                <td><b><font face="Arial"><a href="https://www.instagram.com/"><font color="white">Insta</font></a></font></b></td> 
-            </tr>
-        </tfoot>
-    </table>
+    <form action="#" method="POST">
+        
+        <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Aditya Rastogi">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="aditya@example.com">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="1234567890">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age * (Must be between 18 and 65)</label>
+            <input type="number" id="age" name="age" min="18" max="65" required>
+        </div>
+        <div class="form-group">
+            <label for="bloodGroup">Blood Group *</label>
+            <select id="bloodGroup" name="bloodGroup" required>
+                <option value="" disabled selected>Select your blood group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Gender *</label>
+            <div class="inline-group">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="donationDate">Preferred Donation Date *</label>
+            <input type="date" id="donationDate" name="donationDate" required>
+        </div>
+        <div class="form-group">
+            <label for="donationTime">Preferred Time Slot *</label>
+            <input type="time" id="donationTime" name="donationTime" required>
+        </div>
+
+        <div class="form-group">
+            <label>Medical Eligibility (Check all that apply to you) *</label>
+            <div class="inline-group" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+                <div>
+                    <input type="checkbox" id="weightCheck" name="eligibility" value="Weight>50" required>
+                    <label for="weightCheck">I weigh more than 50 kg (110 lbs).</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="healthCheck" name="eligibility" value="GoodHealth" required>
+                    <label for="healthCheck">I am currently in good health and not taking antibiotics.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tattooCheck" name="eligibility" value="NoRecentTattoo" required>
+                    <label for="tattooCheck">I have not had a tattoo or piercing in the last 6 months.</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Full Address</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your residential address..."></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="notes">Any Special Notes / Medical History</label>
+            <textarea id="notes" name="notes" rows="2" placeholder="Let us know if you have any conditions we should be aware of..."></textarea>
+        </div>
+
+        <div class="button-group">
+            <button type="submit">Register Now</button>
+            <button type="reset">Clear Form</button>
+        </div>
+    </form>
+
+    <div class="map-section">
+        <h2>Camp Location: Central Blood Bank</h2>
+        <p style="text-align: center;">Please arrive 10 minutes prior to your scheduled time.</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.327663242691!2d77.20456101508226!3d28.62002578242278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347b5bd5%3A0xcb1b51e9488a0b0d!2sIndian%20Red%20Cross%20Society!5e0!3m2!1sen!2sin!4v1687501234567!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
 </body>
 </html>
