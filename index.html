@@ -3,203 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Donation Camp Registration</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #b30000;
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="number"],
-        input[type="date"],
-        input[type="time"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; 
-        }
-        .inline-group {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-        .inline-group label {
-            font-weight: normal;
-            display: inline-block;
-            margin-bottom: 0;
-        }
-        .button-group {
-            text-align: center;
-            margin-top: 20px;
-        }
-        button {
-            background-color: #b30000;
-            color: #fff;
-            border: none;
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button[type="reset"] {
-            background-color: #666;
-            margin-left: 10px;
-        }
-        button:hover {
-            background-color: #800000;
-        }
-        button[type="reset"]:hover {
-            background-color: #444;
-        }
-        .map-section {
-            margin-top: 40px;
-            border-top: 2px solid #eee;
-            padding-top: 20px;
-        }
-        iframe {
-            width: 100%;
-            height: 350px;
-            border: 0;
-            border-radius: 8px;
-        }
-    </style>
+    <title>Premium Gallery - Nature & Pets</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Blood Donation Camp Registration</h1>
-    <p style="text-align: center;">Give blood, save lives. Please fill out the form below to register.</p>
-
-    <form action="#" method="POST">
-        
-        <div class="form-group">
-            <label for="fullName">Full Name *</label>
-            <input type="text" id="fullName" name="fullName" required placeholder="Aditya Rastogi">
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required placeholder="aditya@example.com">
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="1234567890">
-        </div>
-
-        <div class="form-group">
-            <label for="age">Age * (Must be between 18 and 65)</label>
-            <input type="number" id="age" name="age" min="18" max="65" required>
-        </div>
-        <div class="form-group">
-            <label for="bloodGroup">Blood Group *</label>
-            <select id="bloodGroup" name="bloodGroup" required>
-                <option value="" disabled selected>Select your blood group</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label>Gender *</label>
-            <div class="inline-group">
-                <input type="radio" id="male" name="gender" value="Male" required>
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="Female">
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="Other">
-                <label for="other">Other</label>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="donationDate">Preferred Donation Date *</label>
-            <input type="date" id="donationDate" name="donationDate" required>
-        </div>
-        <div class="form-group">
-            <label for="donationTime">Preferred Time Slot *</label>
-            <input type="time" id="donationTime" name="donationTime" required>
-        </div>
-
-        <div class="form-group">
-            <label>Medical Eligibility (Check all that apply to you) *</label>
-            <div class="inline-group" style="flex-direction: column; align-items: flex-start; gap: 8px;">
-                <div>
-                    <input type="checkbox" id="weightCheck" name="eligibility" value="Weight>50" required>
-                    <label for="weightCheck">I weigh more than 50 kg (110 lbs).</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="healthCheck" name="eligibility" value="GoodHealth" required>
-                    <label for="healthCheck">I am currently in good health and not taking antibiotics.</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="tattooCheck" name="eligibility" value="NoRecentTattoo" required>
-                    <label for="tattooCheck">I have not had a tattoo or piercing in the last 6 months.</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="address">Full Address</label>
-            <textarea id="address" name="address" rows="3" placeholder="Enter your residential address..."></textarea>
-        </div>
-        
-        <div class="form-group">
-            <label for="notes">Any Special Notes / Medical History</label>
-            <textarea id="notes" name="notes" rows="2" placeholder="Let us know if you have any conditions we should be aware of..."></textarea>
-        </div>
-
-        <div class="button-group">
-            <button type="submit">Register Now</button>
-            <button type="reset">Clear Form</button>
-        </div>
-    </form>
-
-    <div class="map-section">
-        <h2>Camp Location: Central Blood Bank</h2>
-        <p style="text-align: center;">Please arrive 10 minutes prior to your scheduled time.</p>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.327663242691!2d77.20456101508226!3d28.62002578242278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347b5bd5%3A0xcb1b51e9488a0b0d!2sIndian%20Red%20Cross%20Society!5e0!3m2!1sen!2sin!4v1687501234567!5m2!1sen!2sin" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <div class="gallery-header">
+        <h1>Curated Collection</h1>
     </div>
-</div>
+
+    <div class="gallery">
+        <a href="#img-1" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Mountain Landscape">
+            <div class="overlay-caption">Majestic Mountains</div>
+        </a>
+        <a href="#img-2" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Happy Dog">
+            <div class="overlay-caption">Happy Pup</div>
+        </a>
+        <a href="#img-3" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Cat Resting">
+            <div class="overlay-caption">Cozy Feline</div>
+        </a>
+        <a href="#img-4" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227dbb6b46?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Deep Forest">
+            <div class="overlay-caption">Deep Forest</div>
+        </a>
+        <a href="#img-5" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1537151608805-ea90cb4d3ebc?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Golden Retriever">
+            <div class="overlay-caption">Golden Retriever</div>
+        </a>
+        <a href="#img-6" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Curious Cat">
+            <div class="overlay-caption">Curious Eyes</div>
+        </a>
+        <a href="#img-7" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Forest River">
+            <div class="overlay-caption">Forest River</div>
+        </a>
+        <a href="#img-8" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Husky">
+            <div class="overlay-caption">Snow Husky</div>
+        </a>
+        <a href="#img-9" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1513360371669-4dc3fd289ea4?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Kitten">
+            <div class="overlay-caption">Little Kitten</div>
+        </a>
+        <a href="#img-10" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1470071131384-001b85755b36?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Scenic Lake">
+            <div class="overlay-caption">Scenic Lake</div>
+        </a>
+        <a href="#img-11" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1552053831751-596a58c494ed?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Small Dog">
+            <div class="overlay-caption">Playful Terrier</div>
+        </a>
+        <a href="#img-12" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1529778453900-1d54238e55e3?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Outdoor Cat">
+            <div class="overlay-caption">Explorer Feline</div>
+        </a>
+        <a href="#img-13" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Waterfall">
+            <div class="overlay-caption">Hidden Waterfall</div>
+        </a>
+        <a href="#img-14" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1543466835-060114dd9675?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Running Dog">
+            <div class="overlay-caption">Fetch Time</div>
+        </a>
+        <a href="#img-15" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Orange Cat">
+            <div class="overlay-caption">Ginger Cat</div>
+        </a>
+        <a href="#img-16" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1426604908710-53892ff11183?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Sunrise">
+            <div class="overlay-caption">Golden Sunrise</div>
+        </a>
+        <a href="#img-17" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cb962c6?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Corgi">
+            <div class="overlay-caption">Smiling Corgi</div>
+        </a>
+        <a href="#img-18" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Siamese Cat">
+            <div class="overlay-caption">Siamese Stare</div>
+        </a>
+        <a href="#img-19" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1418065460487-3ce7eb161fb9?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Green Hills">
+            <div class="overlay-caption">Rolling Hills</div>
+        </a>
+        <a href="#img-20" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&h=450&q=80" loading="lazy" alt="Running Dogs">
+            <div class="overlay-caption">Dogs at Play</div>
+        </a>
+    </div>
+
+    <div class="lightbox" id="img-1"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1600&h=900&q=80" alt="Mountain Landscape"></div>
+    <div class="lightbox" id="img-2"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&h=900&q=80" alt="Happy Dog"></div>
+    <div class="lightbox" id="img-3"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1600&h=900&q=80" alt="Cat Resting"></div>
+    <div class="lightbox" id="img-4"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1441974231531-c6227dbb6b46?auto=format&fit=crop&w=1600&h=900&q=80" alt="Deep Forest"></div>
+    <div class="lightbox" id="img-5"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1537151608805-ea90cb4d3ebc?auto=format&fit=crop&w=1600&h=900&q=80" alt="Golden Retriever"></div>
+    <div class="lightbox" id="img-6"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=1600&h=900&q=80" alt="Curious Cat"></div>
+    <div class="lightbox" id="img-7"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1600&h=900&q=80" alt="Forest River"></div>
+    <div class="lightbox" id="img-8"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1600&h=900&q=80" alt="Husky"></div>
+    <div class="lightbox" id="img-9"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1513360371669-4dc3fd289ea4?auto=format&fit=crop&w=1600&h=900&q=80" alt="Kitten"></div>
+    <div class="lightbox" id="img-10"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1470071131384-001b85755b36?auto=format&fit=crop&w=1600&h=900&q=80" alt="Scenic Lake"></div>
+    <div class="lightbox" id="img-11"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1552053831751-596a58c494ed?auto=format&fit=crop&w=1600&h=900&q=80" alt="Small Dog"></div>
+    <div class="lightbox" id="img-12"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1529778453900-1d54238e55e3?auto=format&fit=crop&w=1600&h=900&q=80" alt="Outdoor Cat"></div>
+    <div class="lightbox" id="img-13"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1600&h=900&q=80" alt="Waterfall"></div>
+    <div class="lightbox" id="img-14"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1543466835-060114dd9675?auto=format&fit=crop&w=1600&h=900&q=80" alt="Running Dog"></div>
+    <div class="lightbox" id="img-15"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=1600&h=900&q=80" alt="Orange Cat"></div>
+    <div class="lightbox" id="img-16"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1426604908710-53892ff11183?auto=format&fit=crop&w=1600&h=900&q=80" alt="Sunrise"></div>
+    <div class="lightbox" id="img-17"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1587300003388-59208cb962c6?auto=format&fit=crop&w=1600&h=900&q=80" alt="Corgi"></div>
+    <div class="lightbox" id="img-18"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=1600&h=900&q=80" alt="Siamese Cat"></div>
+    <div class="lightbox" id="img-19"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1418065460487-3ce7eb161fb9?auto=format&fit=crop&w=1600&h=900&q=80" alt="Green Hills"></div>
+    <div class="lightbox" id="img-20"><a href="#!" class="lightbox-close"></a><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1600&h=900&q=80" alt="Running Dogs"></div>
 
 </body>
 </html>

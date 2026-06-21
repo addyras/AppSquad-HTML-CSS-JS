@@ -1,0 +1,147 @@
+/* --- Variables & Base Setup --- */
+:root {
+    --black-shade: #0A0908;
+    --night-bordeaux: #49111C;
+    --white-smoke: #F2F4F3;
+    --dusty-taupe: #A9927D;
+}
+
+body {
+    background-color: var(--white-smoke);
+    color: var(--black-shade);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 50px 4vw;
+    overflow-x: hidden;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.gallery-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--night-bordeaux);
+    display: inline-block;
+}
+
+/* --- CSS Grid --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5vw; 
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* --- Gallery Item & Hover Effects --- */
+.gallery-item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background-color: var(--dusty-taupe);
+    display: block; 
+    text-decoration: none;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(10, 9, 8, 0.9), transparent);
+    color: var(--white-smoke);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    box-sizing: border-box;
+}
+
+.gallery-item:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 25px 50px rgba(10, 9, 8, 0.2), 0 0 20px rgba(73, 17, 28, 0.25);
+}
+
+.gallery-item:hover .overlay-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- PURE CSS LIGHTBOX --- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 9, 8, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+    /* Hidden by default */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* The Magic: When the URL ends in #img-1, this triggers */
+.lightbox:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+.lightbox:target img {
+    transform: scale(1); /* Slight pop-in animation */
+}
+
+/* Invisible button that covers the background to close the lightbox */
+.lightbox-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-out;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1024px) {
+    .gallery { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .gallery { grid-template-columns: 1fr; }
+}
