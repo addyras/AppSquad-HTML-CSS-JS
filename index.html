@@ -1,57 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch</title>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
-
 <body>
-    <script>
 
-        let sname, h, e, m, s, c, total, avg, sstatus;
-        sname = prompt("enter the name");
-        h = parseInt(prompt('enter hindi marks'))
-        e = parseInt(prompt('enter english marks'))
-        m = parseInt(prompt('enter math marks'))
-        s = parseInt(prompt('enter science marks'))
-        c = parseInt(prompt('enter computer marks'))
-        total = h + e + m + s + c;
-        avg = total / 5;
-        sstatus = (avg >= 60) ? "pass" : "fail";
-
-        document.write(`<table border="1" width="100%">
-            <thead>
-                <tr>
-                    <th> name</th>
-                    <th>hindi</th>
-                    <th>english</th>
-                    <th>math</th>
-                    <th>Science</th>
-                    <th>total</th>
-                    <th>avg</th>
-                    <th>status</th>
-                    </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td> ${sname} </td>
-                <td> ${h} </td>
-                    <td> ${e} </td>
-                        <td> ${m} </td>
-                            <td> ${s} </td>
-                                <td> ${total} </td>
-                                    <td> ${avg} </td>
-                                        <td style="color: ${avg>=60? 'green': 'red'}
-                                            ">${sstatus} </td>
-                                            </tr>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Let's Connect</h2>
+            <p>Fill out the form below and we'll get back to you shortly.</p>
+        </div>
         
-                                
-        </table>            
-    `)
+        <form action="index.html" method="post">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
 
-    </script>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Send Message
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </form>
+    </div>
+
 </body>
-
 </html>
